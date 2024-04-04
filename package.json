@@ -7,11 +7,20 @@
     "@types/ws": "^8.5.10",
     "express-validator": "^7.0.1",
     "luxon": "^3.4.4",
+    "ts-loader": "^9.5.1",
     "typescript": "^5.4.3",
     "validatorjs": "^3.22.1",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
     "ws": "^8.16.0"
   },
   "devDependencies": {
+    "esbuild": "0.20.2",
     "ts-node": "^10.9.2"
+  },
+  "main": "main.ts",
+  "scripts": {
+    "build": "esbuild main.ts --bundle --minify --platform=node --outfile=./dist/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
